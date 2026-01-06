@@ -2,8 +2,6 @@ INPUT_FILEPATH = "P3 - Lobby/input.txt"
 
 import heapq
 
-
-
 def part_one(power_banks):
     total_power = 0
 
@@ -21,12 +19,6 @@ def part_one(power_banks):
         total_power += int(f"{largest}{second_largest}")
     
     return total_power
-
-class Battery:
-    def __init__(self, value, pos):
-        self.value = value, pos
-        self.pos = 0
-
 
 def part_two(power_banks):
     total_power = 0
@@ -55,8 +47,6 @@ def part_two(power_banks):
         total_power += int("".join([str(x) for x in solution]))
     return total_power  
 
-
-# Read input as a series of tuples (dir, num)
 def read_input(input_file):
     power_banks = []
     with open(input_file, "r") as file:
